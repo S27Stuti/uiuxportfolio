@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#07050e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Stuti | UI/UX Designer & Product Thinker</title>
+  <meta name="description" content="Portfolio of Stuti - UI/UX Designer specializing in Figma, Design Systems, Mobile & Web UI, and Human-Centered Experiences.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Floating Ambient Glowing Background Layer -->
+  <div class="bg-ambient-layer" aria-hidden="true">
+    <div class="ambient-blob ambient-blob-1"></div>
+    <div class="ambient-blob ambient-blob-2"></div>
+    <div class="ambient-blob ambient-blob-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="brand-logo" aria-label="Stuti Portfolio Home">
+        <span class="symbol">{/</span><span class="brand-name">Stuti</span><span class="symbol">}</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-cta-group">
+        <!-- Live System Health Check Trigger -->
+        <button id="openHealthBtn" class="nav-btn-health" title="Check Frontend, Backend & SQLite Database Health">
+          <span class="pulse-dot"></span>
+          <span>Health Check</span>
+        </button>
+
+        <!-- Database Inquiries Modal Trigger -->
+        <button id="openInquiriesBtn" class="nav-btn-inquiries" title="View messages stored in SQLite database">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Inbox (DB)</span>
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <div class="badge-availability reveal">
+        <span class="pulse-dot"></span> Available for UI/UX & Product Design Roles
+      </div>
+
+      <h1 class="hero-title reveal">
+        Crafting Intuitive & <span class="gradient-text">High-Impact</span> Digital Experiences
+      </h1>
+
+      <p class="hero-subtitle reveal">
+        UI/UX Designer driven by user empathy and modern design systems. I transform complex workflows into elegant, conversion-focused web and mobile interfaces using Figma.
+      </p>
+
+      <div class="hero-cta-group reveal">
+        <a href="#projects" class="btn btn-primary">
+          <span>Explore Selected Work</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <span>Get in Touch</span>
+        </a>
+      </div>
+
+      <!-- Metrics Ribbon -->
+      <div class="hero-stats-ribbon reveal">
+        <div class="stat-item">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Featured Case Studies</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">15+</span>
+          <span class="stat-label">Prototypes & Wireframes</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">User-Centric Focus</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" id="dbMessageCount">Active</span>
+          <span class="stat-label">SQLite Database Sync</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Design with Purpose & Precision</h2>
+        <p class="section-desc">Bridging user needs with intuitive visual solutions and technical feasibility.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <p>
+            I am a creative and detail-oriented <strong>UI/UX Designer</strong> passionate about designing intuitive, accessible, and aesthetically memorable digital products. With strong hands-on expertise in Figma, I focus on clean visual hierarchy, scalable design systems, and seamless user journeys.
+          </p>
+          <p>
+            Having a foundation in frontend technologies (HTML, CSS, JavaScript) gives me a distinct advantage: I know how designs translate into real code, allowing me to collaborate smoothly with developers and build interfaces that are as feasible as they are beautiful.
+          </p>
+          <p>
+            Whether it's simplifying an intricate healthcare dashboard or elevating an e-commerce checkout flow, I love turning complex problems into effortless user interactions across mobile, tablet, and desktop devices.
+          </p>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-wrapper" id="skills">
+          <div class="skill-category-card reveal">
+            <div class="category-header">
+              <div class="category-icon">🎨</div>
+              <h3>UI/UX & Product Design</h3>
+            </div>
+            <div class="tags-cluster">
+              <span class="skill-pill">Figma</span>
+              <span class="skill-pill">Wireframing</span>
+              <span class="skill-pill">Interactive Prototyping</span>
+              <span class="skill-pill">User Research</span>
+              <span class="skill-pill">Design Systems</span>
+              <span class="skill-pill">Responsive Web & Mobile</span>
+              <span class="skill-pill">Information Architecture</span>
+              <span class="skill-pill">Usability Testing</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card reveal">
+            <div class="category-header">
+              <div class="category-icon">🛠️</div>
+              <h3>Creative & Collaboration Tools</h3>
+            </div>
+            <div class="tags-cluster">
+              <span class="skill-pill">Adobe Photoshop</span>
+              <span class="skill-pill">Adobe Illustrator</span>
+              <span class="skill-pill">Whimsical</span>
+              <span class="skill-pill">Miro</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card reveal">
+            <div class="category-header">
+              <div class="category-icon">💻</div>
+              <h3>Frontend & Technical Feasibility</h3>
+            </div>
+            <div class="tags-cluster">
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">CSS3 / Flexbox / Grid</span>
+              <span class="skill-pill">Modern JavaScript</span>
+              <span class="skill-pill">UI Motion</span>
+              <span class="skill-pill">REST APIs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Process Section -->
+  <section id="process" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Workflow</span>
+        <h2 class="section-title">My Design Process</h2>
+        <p class="section-desc">A structured methodology that turns ambiguity into delight.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <div class="step-num">01</div>
+          <h3>Discover & Research</h3>
+          <p>Uncovering user pain points, analyzing competitors, and defining user personas and business goals.</p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-num">02</div>
+          <h3>Information & Wireframes</h3>
+          <p>Mapping user journeys, sitemaps, and building low-fidelity wireframes to validate layout and flow early.</p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-num">03</div>
+          <h3>Visual UI & Design System</h3>
+          <p>Crafting typography, color tokens, reusable components, and high-fidelity mockups with modern aesthetics.</p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-num">04</div>
+          <h3>Prototype & Test</h3>
+          <p>Building interactive clickable prototypes in Figma and iterating based on user feedback and usability tests.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section (Connected to SQLite DB) -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-desc">Real-world web and mobile design case studies stored and served dynamically from the SQLite database.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs-wrapper reveal">
+        <button class="filter-btn active" data-category="All">All Projects</button>
+        <button class="filter-btn" data-category="E-Commerce">E-Commerce</button>
+        <button class="filter-btn" data-category="Healthcare">Healthcare</button>
+        <button class="filter-btn" data-category="Fitness & Mobile">Fitness & Mobile</button>
+      </div>
+
+      <!-- Dynamic Project Grid (Populated via /api/projects from SQLite) -->
+      <div class="projects-grid" id="projectGrid">
+        <!-- Rendered by app.js from Database -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Let’s Create Something Extraordinary</h2>
+        <p class="section-desc">Have an exciting project, freelance opportunity, or full-time role? Send a message below!</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Cards -->
+        <div class="contact-info-cards reveal">
+          <a href="mailto:stutu2004shah@gmail.com" class="info-card">
+            <div class="info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="info-meta">
+              <span>Email</span>
+              <strong>stutu2004shah@gmail.com</strong>
+            </div>
+            <button type="button" class="btn-copy" id="copyEmailBtn" title="Copy Email Address">Copy</button>
+          </a>
+
+          <a href="https://wa.me/917041694260" target="_blank" rel="noopener noreferrer" class="info-card">
+            <div class="info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </div>
+            <div class="info-meta">
+              <span>WhatsApp Direct</span>
+              <strong>+91 70416 94260</strong>
+            </div>
+          </a>
+
+          <a href="tel:+917041694260" class="info-card">
+            <div class="info-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="info-meta">
+              <span>Phone</span>
+              <strong>+91 70416 94260</strong>
+            </div>
+          </a>
+        </div>
+
+        <!-- Interactive Contact Form (Saved to SQLite DB) -->
+        <div class="contact-form-card reveal">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" class="form-input" placeholder="e.g. Sarah Jenkins" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email Address *</label>
+              <input type="email" id="email" class="form-input" placeholder="e.g. sarah@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Project Type / Subject</label>
+              <input type="text" id="subject" class="form-input" placeholder="e.g. Mobile App Redesign / Freelance UI">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" class="form-textarea" placeholder="Tell me about your project, timeline, or inquiry..." required></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%;">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+
+            <div id="formStatus" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study Modal -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
+    <div class="modal-box">
+      <button class="modal-close" id="closeProjectModal" aria-label="Close modal">✕</button>
+      <div id="modalBody">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Inquiries Modal (SQLite DB Messages) -->
+  <div class="modal-overlay" id="inquiriesModal" role="dialog" aria-modal="true">
+    <div class="modal-box" style="max-width: 820px;">
+      <button class="modal-close" id="closeInquiriesBtn" aria-label="Close modal">✕</button>
+      <div class="modal-details">
+        <h2>Database Messages & Inquiries</h2>
+        <p class="modal-subtitle">Incoming inquiries stored securely in your SQLite backend (<code>portfolio.db</code>).</p>
+        <div id="inquiriesList">
+          <!-- Populated from /api/messages -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- System Health Modal -->
+  <div class="modal-overlay" id="healthModal" role="dialog" aria-modal="true">
+    <div class="modal-box" style="max-width: 650px;">
+      <button class="modal-close" id="closeHealthBtn" aria-label="Close modal">✕</button>
+      <div class="modal-details">
+        <h2>System & Connection Health</h2>
+        <p class="modal-subtitle">Real-time status check of Frontend, Express Backend & SQLite Database.</p>
+        
+        <div id="healthModalContent">
+          <!-- Populated from /api/health -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Scroll back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>© 2026 Stuti Shah • Designed with <span class="heart">❤</span> for intuitive experiences.</p>
+      </div>
+      <div class="footer-right">
+        <span class="db-status-pill" id="dbBadge">
+          <span class="pulse-dot"></span> Checking DB...
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
